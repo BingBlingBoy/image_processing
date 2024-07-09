@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/mnt/c/files/image_processing",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/main.cpp.o -c /mnt/c/files/image_processing/main.cpp",
+  "file": "/mnt/c/files/image_processing/main.cpp"
+}
+]
