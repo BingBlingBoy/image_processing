@@ -3,5 +3,10 @@
   "directory": "/mnt/c/files/image_processing",
   "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/src/main.cpp.o -c /mnt/c/files/image_processing/src/main.cpp",
   "file": "/mnt/c/files/image_processing/src/main.cpp"
+},
+{
+  "directory": "/mnt/c/files/image_processing",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/src/menu.cpp.o -c /mnt/c/files/image_processing/src/menu.cpp",
+  "file": "/mnt/c/files/image_processing/src/menu.cpp"
 }
 ]
