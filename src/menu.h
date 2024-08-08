@@ -12,10 +12,6 @@ namespace User {
     private:
         std::string m_input {};
 
-    private:
-        void ignoreLine();
-        bool clearFailedExtraction();
-        bool checkValidFilePath(std::string& filePath);
     public:
         Input() = default;
         

@@ -1,52 +1,11 @@
 #include "menu.h"
+#include "error_checking.h"
 #include <cstdio>
 #include <iostream>
 #include <string>
-#include <limits>
 #include <sys/stat.h>
-#include <filesystem>
-
 
 using namespace User;
-namespace fs = std::filesystem;
-
-void Input::ignoreLine()
-{
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}
-
-bool Input::checkValidFilePath(std::string& filePath)
-{
-    const fs::path imagePath {filePath};
-    fs::file_status s = fs::file_status{};
-    if (fs::exists(imagePath))
-    {
-        return true;
-    }
-    else
-    {
-        std::cout << imagePath << " does not exist\n";
-        return false;
-    }
-}
-
-bool Input::clearFailedExtraction()
-{
-    if (!std::cin)
-    {
-        if (std::cin.eof())
-        {
-            exit(0);
-        }
-
-        std::cin.clear();
-        ignoreLine();
-
-        return true;
-    }
-
-    return false;
-}
 
 void Input::getUserFileInput()
 {
@@ -57,19 +16,19 @@ void Input::getUserFileInput()
         // getline(std::cin >> std::ws, file);
         std::cin >> file;
 
-        if (clearFailedExtraction())
+        if (ErrorChecking::clearFailedExtraction())
         {
             std::cout << "Input is invalid. Please try again \n";
             continue;
         }
         
-        if (!checkValidFilePath(file))
+        if (!ErrorChecking::checkValidFilePath(file))
         {
-            std::cout << file << " does not exists\n";
+            std::cout << "'" << file << "'" << " does not exists\n";
             continue;
         }
 
-        ignoreLine();
+        ErrorChecking::ignoreLine();
         m_input = file;
         break;
     }

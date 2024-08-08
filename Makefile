@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/error_checking.o: src/error_checking.cpp.o
+.PHONY : src/error_checking.o
+
+# target to build an object file
+src/error_checking.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.o
+.PHONY : src/error_checking.cpp.o
+
+src/error_checking.i: src/error_checking.cpp.i
+.PHONY : src/error_checking.i
+
+# target to preprocess a source file
+src/error_checking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.i
+.PHONY : src/error_checking.cpp.i
+
+src/error_checking.s: src/error_checking.cpp.s
+.PHONY : src/error_checking.s
+
+# target to generate assembly for a file
+src/error_checking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.s
+.PHONY : src/error_checking.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/error_checking.o"
+	@echo "... src/error_checking.i"
+	@echo "... src/error_checking.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
