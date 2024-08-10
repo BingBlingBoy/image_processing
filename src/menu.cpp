@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "mathematics.h"
 #include "error_checking.h"
 #include <cstdio>
 #include <iostream>
@@ -6,6 +7,7 @@
 #include <sys/stat.h>
 
 using namespace User;
+
 
 void Input::getUserFileInput()
 {
