@@ -8,8 +8,7 @@ namespace Math {
 class Operations
 {
 public:
-    template <typename T, size_t N, size_t M>
-    cv::Mat convolution(cv::Mat image, const T (&a)[N][M]);
+    cv::Mat convolution(cv::Mat& image, cv::Mat& kernel);
 };
 }
 

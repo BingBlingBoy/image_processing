@@ -5,11 +5,13 @@
 #include <string_view>
 #include "mathematics.h"
 
+
 #ifndef MENU_H
 #define MENU_H
 
-namespace User {
-    class Input : public Math::Operations
+namespace User
+{
+    class Input: public Math::Operations
     {
     private:
         cv::Mat m_image {};
@@ -27,7 +29,7 @@ namespace User {
         const cv::Mat getImage() const {return m_image;}
         
     public:
-        int shape()
+        int image_shape()
         {
             if (m_input.empty()) {
                 return -69;
