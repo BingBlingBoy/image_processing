@@ -2,7 +2,9 @@
 #include <opencv4/opencv2/core/hal/interface.h>
 #include <opencv4/opencv2/imgcodecs.hpp>
 #include <opencv2/opencv.hpp>
+#include <vector>
 #include "menu.h"
+#include "mathematics.h"
  
 using namespace cv;
     
@@ -25,7 +27,12 @@ int main(int argc, char* argv[])
     image = imread(user.m_input, IMREAD_COLOR);
     user.setImage(image);
 
-    std::cout << user.shape() << '\n';
+    std::vector<double> kernel_info {2, 2, 2, 2, 2, 2, 2, 2, 2};
+
+    Mat kernel;
+    kernel = (Mat_<float>(3, 3) << 1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+    Mat covolutioned_imaged = convolution(image, kernel);
 
 
     if (!image.data)

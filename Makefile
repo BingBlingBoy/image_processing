@@ -129,30 +129,6 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/error_checking.o: src/error_checking.cpp.o
-.PHONY : src/error_checking.o
-
-# target to build an object file
-src/error_checking.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.o
-.PHONY : src/error_checking.cpp.o
-
-src/error_checking.i: src/error_checking.cpp.i
-.PHONY : src/error_checking.i
-
-# target to preprocess a source file
-src/error_checking.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.i
-.PHONY : src/error_checking.cpp.i
-
-src/error_checking.s: src/error_checking.cpp.s
-.PHONY : src/error_checking.s
-
-# target to generate assembly for a file
-src/error_checking.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/error_checking.cpp.s
-.PHONY : src/error_checking.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -201,30 +177,6 @@ src/mathematics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mathematics.cpp.s
 .PHONY : src/mathematics.cpp.s
 
-src/menu.o: src/menu.cpp.o
-.PHONY : src/menu.o
-
-# target to build an object file
-src/menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.o
-.PHONY : src/menu.cpp.o
-
-src/menu.i: src/menu.cpp.i
-.PHONY : src/menu.i
-
-# target to preprocess a source file
-src/menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.i
-.PHONY : src/menu.cpp.i
-
-src/menu.s: src/menu.cpp.s
-.PHONY : src/menu.s
-
-# target to generate assembly for a file
-src/menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.s
-.PHONY : src/menu.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,18 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... src/error_checking.o"
-	@echo "... src/error_checking.i"
-	@echo "... src/error_checking.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mathematics.o"
 	@echo "... src/mathematics.i"
 	@echo "... src/mathematics.s"
-	@echo "... src/menu.o"
-	@echo "... src/menu.i"
-	@echo "... src/menu.s"
 .PHONY : help
 
 

@@ -4,12 +4,14 @@
 #ifndef MATHEMATICS_H
 #define MATHEMATICS_H
 
-namespace Math {
-class Operations
-{
-public:
-    cv::Mat convolution(cv::Mat& image, cv::Mat& kernel);
-};
-}
+cv::Mat convolution(const cv::Mat& image, const cv::Mat& kernel);
+
+// namespace Math {
+// class Operations
+// {
+// public:
+//     cv::Mat convolution(cv::Mat& image, cv::Mat& kernel);
+// };
+// }
 
 #endif

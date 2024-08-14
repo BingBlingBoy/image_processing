@@ -11,7 +11,7 @@
 
 namespace User
 {
-    class Input: public Math::Operations
+    class Input
     {
     private:
         cv::Mat m_image {};

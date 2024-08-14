@@ -6,16 +6,6 @@
 },
 {
   "directory": "/mnt/c/files/image_processing",
-  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/src/menu.cpp.o -c /mnt/c/files/image_processing/src/menu.cpp",
-  "file": "/mnt/c/files/image_processing/src/menu.cpp"
-},
-{
-  "directory": "/mnt/c/files/image_processing",
-  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/src/error_checking.cpp.o -c /mnt/c/files/image_processing/src/error_checking.cpp",
-  "file": "/mnt/c/files/image_processing/src/error_checking.cpp"
-},
-{
-  "directory": "/mnt/c/files/image_processing",
   "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/main.dir/src/mathematics.cpp.o -c /mnt/c/files/image_processing/src/mathematics.cpp",
   "file": "/mnt/c/files/image_processing/src/mathematics.cpp"
 }
