@@ -5,6 +5,7 @@
 #include <opencv4/opencv2/core/mat.hpp>
 #include <opencv4/opencv2/core/types.hpp>
 #include <opencv4/opencv2/imgproc.hpp>
+#include <cmath>
 #include <vector>
 
 // using namespace Math;
@@ -58,4 +59,29 @@ cv::Mat /* Operations:: */convolution(const cv::Mat& image, const cv::Mat& kerne
     std::cout << output.channels() << '\n';
 
     return output;
+}
+
+template <typename T, typename U>
+cv::Mat Gernerate_Gaussian_Kernel (U sigma, const std::vector<T>& filter_size)
+{
+    T m = filter_size[0];
+    T n = filter_size[1];
+
+    T m_half = m / 2;
+    T n_half = m / 2;
+
+    cv::Mat gaussian_filter = cv::Mat::zeros(m, n, CV_32F);
+    double converted_sigma = static_cast<double>(sigma);
+
+    for (int y = -m_half; y < m_half; ++y)
+    {
+        for (int x = -n_half; x < n_half; ++x)
+        {
+            double normal = 1 / (2.0 * M_PI * std::pow(converted_sigma, 2));
+            double exp = std::exp(-(std::pow(x, 2) + std::pow(y, 2)) / (2 * std::pow(converted_sigma, 2)));
+            gaussian_filter[y+m_half, x+n_half] = normal * exp;
+        }
+    }
+
+    return gaussian_filter;
 }
